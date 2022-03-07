@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
     this.registationService.saveUser(this.user).subscribe(data=>{
       if(data===true)
       {
-        alert("Suceessfully SignedUp");
+       alert("Suceessfully SignedUp");
         this.router.navigate(['/']);
       }
       else{
@@ -44,7 +44,6 @@ export class SignupComponent implements OnInit {
 //passwordRegex ="(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[$@#$^!%?&])[A-Za-z\d$@#$^!%?&].{7,15}";
 passwordRegex ="[A-Za-z\d$@#$^!%?&].{7,15}";
 Form = this.formbuilder.group({
-  role:['',[Validators.required,Validators.minLength(4)]],
   email: ['',[Validators.required,Validators.pattern(this.emailRegex)]],
   userName:['',[Validators.required,Validators.minLength(3)]],
   mobileNumber:['',[Validators.required,Validators.minLength(10)]],
@@ -66,12 +65,6 @@ onlyNumbersAllowed(event : any):boolean{
     return false;
   }
   return true;
-}
-get role(){
-  return this.Form.get('role');
-}
-get rolecontrols(){
-  return this.Form.controls['role'].errors;
 }
 get email(){
   return this.Form.get('email');

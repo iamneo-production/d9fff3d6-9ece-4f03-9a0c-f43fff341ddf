@@ -25,18 +25,22 @@ export class LoginComponent implements OnInit {
     {
       this.router.navigate(['/admin']);
     }
-    this.registationService.LoginUser(this.loginuser).subscribe(data=>{
-      if(data===true)
-      {
-        alert("Customer Suceessfully LoggedIn");
-         this.router.navigate(['/']);
-      }
-      else if(data===false)
-      {
-        alert("Wrong Username or Password");
+    else
+    {
+         this.registationService.LoginUser(this.loginuser).subscribe(data=>{
+         if(data===true)
+          {
+            alert("Customer Suceessfully LoggedIn");
+               this.router.navigate(['/']);
+           }
+          else if(data===false)
+            {
+              alert("Wrong Username or Password");
           
+            }
+          });
       }
-    });
+ 
   }
   emailRegex = "";
 passwordRegex =""; 

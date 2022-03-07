@@ -13,19 +13,17 @@ public class UserModel {
 	private String password;
 	private String username;
 	private String mobileNumber;
-	private String userRole;
 	
 	public UserModel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public UserModel(String email, String password, String username, String mobileNumber, String userRole) {
+	public UserModel(String email, String password, String username, String mobileNumber) {
 		super();
 		this.email = email;
 		this.password = password;
 		this.username = username;
 		this.mobileNumber = mobileNumber;
-		this.userRole = userRole;
 	}
 	public String getEmail() {
 		return email;
@@ -51,12 +49,5 @@ public class UserModel {
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-	public String getUserRole() {
-		return userRole;
-	}
-	public void setUserRole(String userRole) {
-		this.userRole = userRole;
-	}
-	
 	
 }

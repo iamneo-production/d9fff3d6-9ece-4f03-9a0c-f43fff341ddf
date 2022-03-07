@@ -9,14 +9,23 @@
     text-align:center;
     padding-top: 10px;
     color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.green
+{
+    color:green;
 }
 .log{
-    background-color:#D1D1D1;
+    margin-top: 2px;
+    background-color: rgb(70, 0, 41);
     height: 83vh;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 input.ng-touched.ng-invalid
 {

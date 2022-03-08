@@ -31,5 +31,4 @@ public class LoginModel {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 }

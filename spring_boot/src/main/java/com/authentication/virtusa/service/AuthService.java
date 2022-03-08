@@ -2,6 +2,7 @@ package com.authentication.virtusa.service;
 
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.authentication.virtusa.model.LoginModel;
@@ -10,12 +11,11 @@ import com.authentication.virtusa.repository.UserRepository;
 
 @Service
 public class AuthService {
+	@Autowired
 	UserRepository repo;
-	public AuthService(UserRepository repo) {
-		super();
-		this.repo = repo;
-	}
+	
 	public boolean saveUser(UserModel user){
+		try {
 		int temp=0;
 		for(UserModel obj : repo.findAll())
 		{
@@ -28,11 +28,14 @@ public class AuthService {
 		if(temp==0) {
 			repo.save(user);
 			return true;
+		}}
+		catch(Exception e)
+		{
+			System.out.print(e);
 		}
-		else
-			return false;
+		return false;
 	}
-	public boolean check(LoginModel data) {
+	public boolean check(LoginModel data) {					
 		UserModel obj=repo.findByEmail(data.getEmail());
 		//System.out.print(obj.getEmail()+" "+obj.getPassword()+" "+data.getEmail()+" "+data.getPassword());
 		if((data.getEmail().equals(obj.getEmail())) && (data.getPassword().equals(obj.getPassword())))

@@ -18,12 +18,12 @@ export class SignupService {
 
   public loginUserFromRemote(user :User):Observable<any>{
   //  return this._http.post<any>("http://localhost:8080/login",user)
-   return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//login",user)
+   return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/login",user)
   //  return this._http.post<any>("http://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//login",user)
   }
   public signupUserFromRemote(user :User):Observable<any>{
     // return this._http.post<any>("http://localhost:8080/signup",user)
-    return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//signup",user)
+    return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/signup",user)
     // return this._http.post<any>("http://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//signup",user)
    }
 

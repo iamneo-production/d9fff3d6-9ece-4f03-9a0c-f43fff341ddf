@@ -1,0 +1,16 @@
+.nav-bar
+{
+    background-color: aqua; 
+}
+.logout
+{
+    text-indent: end;
+}
+.top-fields
+{
+    font-size: 20px;
+    display: flex;
+   
+    margin-right: 40px;
+    text-indent: 250px;
+}

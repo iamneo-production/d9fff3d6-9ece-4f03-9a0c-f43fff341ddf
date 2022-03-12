@@ -1,0 +1,9 @@
+.whole
+{
+    display:flex;
+    flex-direction: column;
+}
+.wrong
+{
+    background-color: red;
+}

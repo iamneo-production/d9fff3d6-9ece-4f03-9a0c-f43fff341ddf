@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 // import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

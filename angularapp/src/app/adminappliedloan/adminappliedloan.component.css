@@ -1,0 +1,33 @@
+.detailsofcustomer
+{
+    display:flex;
+    flex-wrap: wrap;
+    align-self: auto;
+    text-indent: 50px;
+    justify-content: center;
+    background-color: grey;
+    padding: 5%;
+    font-size: larger;
+    margin-left: 40px;
+    margin-top: 3px;
+    margin-right: 40px;
+}
+.buttons 
+{
+    display: flex;
+    justify-content: end;
+}
+.first,.secound
+{
+    display: flexbox;
+
+}
+.back
+{
+    background-color: gainsboro;
+}
+div {border-width: thick;}
+.mat-raised-button.mat-success
+{
+    background-color: #155724;
+}

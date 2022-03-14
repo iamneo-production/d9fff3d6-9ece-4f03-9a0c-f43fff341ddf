@@ -5,11 +5,11 @@
     align-self: auto;
     text-indent: 50px;
     justify-content: center;
-    background-color: grey;
+    background-color:white;
     padding: 5%;
     font-size: larger;
     margin-left: 40px;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-right: 40px;
 }
 .buttons 
@@ -24,7 +24,7 @@
 }
 .back
 {
-    background-color: gainsboro;
+    background-color: #4D8C57;
 }
 div {border-width: thick;}
 .mat-raised-button.mat-success

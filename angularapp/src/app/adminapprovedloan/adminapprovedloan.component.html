@@ -8,7 +8,7 @@
 <table class="back">
     <tbody>
        <tr *ngFor="let i of users">
-    <div *ngIf="i.apprej!=''">
+    <div *ngIf="i.apprej!=null">
         <div class="detailsofcustomer">
           <div class="first">
            <td>ApplicantName: {{ i.applicantName }}</td>
@@ -33,11 +33,11 @@
    <br>  
     <div class="buttons">          
         <td ><button (click)="deleteCustomer(i.loanId)" class="btn btn-danger">Delete</button>
-            <button (click)="customerDetails(i.loanId)" class="btn btn-info" style="margin-left: 10px">View</button>
-            <button (click)="editCustomer(i.loanId)" class="btn btn-info" style="margin-left: 10px"> Edit</button>
+            <button (click)="customerDetails(i.loanId)" class="btn btn-success" style="margin-left: 10px">View</button>
+            <button (click)="editCustomer(i.loanId)" class="btn btn-secondary" style="margin-left: 10px"> Edit</button>
         </td>
         <container-element [ngSwitch]="i.apprej">
-            <label *ngSwitchCase="'app'"> <button class="btn btn-mini btn-primary" value="Approved">Approved</button></label>
+            <label *ngSwitchCase="'app'"> <button class="btn btn-success" value="Approved">Approved</button></label>
             <label *ngSwitchCase="'rej'"><button class="btn btn-mini btn-danger">Rejected</button></label>
          </container-element>
          </div> 

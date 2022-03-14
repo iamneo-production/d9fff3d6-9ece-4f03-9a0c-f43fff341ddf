@@ -11,7 +11,7 @@
     align-self: auto;
     text-indent: 50px;
     justify-content: center;
-    background-color: grey;
+    background-color:white;
     padding: 5%;
     font-size: larger;
     margin-left: 40px;
@@ -27,4 +27,8 @@
 {
     display: flexbox;
 
+}
+.back
+{
+    background-color: #4D8C57;
 }

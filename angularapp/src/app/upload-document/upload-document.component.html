@@ -1,8 +1,10 @@
+<div class="uploadhtml">
 <p>upload-document works!</p>
 <h1>Upload Document</h1>
 
-<div class="form-group">
+  <div class="form-group">
   <label for="file">File Upload:</label>
   <input type="file" class="form-control"  id="file" name="file" (change)="onSelectFile($event)" >
+   </div>
+  <button type="submit" class="btn btn-primary" (click)="uploadDocument()">Submit</button>
 </div>
-<button type="submit" class="btn btn-primary" (click)="uploadDocument()">Submit</button>

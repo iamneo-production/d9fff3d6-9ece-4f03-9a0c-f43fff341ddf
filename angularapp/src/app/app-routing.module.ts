@@ -6,13 +6,15 @@ import { LoginComponent } from './login/login.component';
 // import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { UploadDocumentComponent } from './upload-document/upload-document.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   // {path:'loginsuccess',component:LoginsuccessComponent,canActivate:[AuthGuard]}, 
   {path:'usersuccess',component:UserdashboardComponent}, 
   {path:'signup',component:SignupComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'uploadFile',component:UploadDocumentComponent}
 ];
 
 @NgModule({

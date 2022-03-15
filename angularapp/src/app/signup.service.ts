@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpEvent} from '@angular/common/http'
 
 
 @Injectable({
@@ -21,10 +21,21 @@ export class SignupService {
    return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/login",user)
   //  return this._http.post<any>("http://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//login",user)
   }
+
   public signupUserFromRemote(user :User):Observable<any>{
     // return this._http.post<any>("http://localhost:8080/signup",user)
     return this._http.post<any>("https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/signup",user)
     // return this._http.post<any>("http://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io//signup",user)
+   }
+
+   private baseurl='https://8080-dafccccadbcbffcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/uploadFile';
+   public uploadDocumentFromRemote( file: File):Observable<HttpEvent<any>>{
+       // return this._http.post<any>("http://localhost:8080/uploadFile",document)
+      let url=this.baseurl
+       const formData: FormData=new FormData();
+       formData.append('file',file,file.name);
+   
+      return this._http.post<any>(url,formData);
    }
 
   // calling the server to generate token

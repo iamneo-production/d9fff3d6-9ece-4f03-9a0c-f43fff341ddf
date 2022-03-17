@@ -1,0 +1,19 @@
+<h2>Customer Details</h2> 
+<div *ngIf="model">
+    <div class="whole">
+        <label><b>Loan Id: {{model.loanId}}</b></label><br>
+        <label><b>Loan Type:{{model.loantype}}</b></label><br>
+		<label><b>ApplicantName:{{model.applicantName}}</b></label><br>
+		<label><b>applicantAddress:{{model.applicantAddress}}</b></label><br>
+		<label><b>ApplicantMobile:{{model.applicantMobile}}</b></label><br>
+		<label><b>ApplicantEmail:{{model.applicantEmail}}</b></label><br>
+		<label><b>ApplicantAadharrNo:{{model.applicantAadharr}}</b></label><br>
+		<label><b>ApplicantPanNo:{{model.applicantPan}}</b></label><br>
+		<label><b>ApplicantSalary:{{model.applicantSalary}}</b></label><br>	
+		<label><b>RepaymentMonths:{{model.repaymentMonths}}</b></label><br>	
+		<br>										
+        <button (click)="list()" class="btn btn-primary">Back to customerDetails</button><br>
+		<button (click)="list1()" class="btn btn-primary">Back to Search</button>
+    </div>
+</div>
+<br>

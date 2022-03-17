@@ -1,0 +1,19 @@
+<div class="main"> 
+    <div class="nav-bar" >
+         <h2>Login</h2>
+     </div>
+    <div class="log">
+     <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+           <div>
+              <input type="text" id="email" [(ngModel)]="loginuser.email" placeholder="Enter email" name="email" formControlName="email" >
+           </div> 
+          <div>
+               <input type="password" id="password" [(ngModel)]="loginuser.password" placeholder="Enter Password" name="password" formControlName="password" > 
+         </div>
+          <div class="size">
+              <button id="loginButton" class="btn btn-primary" >Login </button>
+              <p class="green">New User/Admin ? <a routerLink="/signup">Sign up</a> </p>
+          </div> 
+    </form> 
+    </div>
+</div>

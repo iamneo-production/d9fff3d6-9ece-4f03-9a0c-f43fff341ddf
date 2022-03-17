@@ -1,0 +1,51 @@
+.main{
+ 
+    height: 100vh;
+    padding: 20px;
+}
+.nav-bar{
+    background-color:#0C1E7F;
+    height: 10vh;
+    text-align:center;
+    padding-top: 10px;
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.green
+{
+    color:green;
+}
+.log{
+    margin-top: 2px;
+    background-color: rgb(70, 0, 41);
+    height: 83vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+input.ng-touched.ng-invalid
+{
+    border : 1px solid red;
+}
+input{
+    width: 500px;
+    height: 50px;
+    margin: 20px;
+    padding-left: 20px;
+}
+.btn{
+    width: 100px;
+    font-size: 20px;
+}
+.size{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.size p{
+    margin: 10px;
+}

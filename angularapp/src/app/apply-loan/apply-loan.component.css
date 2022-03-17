@@ -27,6 +27,14 @@ input[type="file"] {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.bottom-half-1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.bottom-half-2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
 #applyLoanButton{
     width: 170px;

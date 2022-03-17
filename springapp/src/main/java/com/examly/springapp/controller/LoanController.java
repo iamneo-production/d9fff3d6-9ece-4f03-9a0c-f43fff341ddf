@@ -12,7 +12,7 @@ import com.examly.springapp.model.LoanApplicantModel;
 import com.examly.springapp.service.LoanService;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://8081-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/")
 public class LoanController {
 	@Autowired
 	LoanService loanService;

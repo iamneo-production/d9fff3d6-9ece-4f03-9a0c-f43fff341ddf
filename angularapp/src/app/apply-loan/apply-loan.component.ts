@@ -14,7 +14,7 @@ export class ApplyLoanComponent implements OnInit{
   loan: Loan;
   doc: Document;
   message: string|undefined;
-
+  selectedFile : any = File;
   constructor(
     private formbuilder: FormBuilder,
     private loanService: LoanService  
@@ -26,18 +26,20 @@ export class ApplyLoanComponent implements OnInit{
   onApplyLoan(){
     console.log(this.loan);
 
-    this.loanService.applyLoan(this.loan).subscribe(response => {
-      if (response.status === 200) {
+    this.loanService.applyLoan(this.loan).subscribe(
+     data => {
         this.message = 'Loan Applied successfully';
-      } else {
+      },
+      error => {
         this.message = 'Error! Please Try Again';
       }
-    });
+    );
   }
 
   public onFileChanged(event) {
-    this.uploadDocument = event.target.files[0];
-    // this.selectedFile = event.target.files[0];
+    const file = event.target.files[0];
+    this.selectedFile = file;
+    this.uploadDocument = file; 
   }
 
   public onUpload(){
@@ -45,13 +47,14 @@ export class ApplyLoanComponent implements OnInit{
     // const uploadFileData = new FormData();
     // uploadFileData.append('file', this.selectedFile);
 
-    this.loanService.uploadDocument(this.doc).subscribe(response => {
-      if (response.status === 200) {
+    this.loanService.uploadDocument(this.doc).subscribe(
+      data => {
         this.message = 'File uploaded successfully';
-      } else {
+      }, 
+      error => {
         this.message = 'File not uploaded successfully';
       }
-    });
+    );
   }
 
   emailRegex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"

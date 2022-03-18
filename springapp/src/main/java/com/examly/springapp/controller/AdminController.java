@@ -27,7 +27,7 @@ public class AdminController {
 	@GetMapping("/displaycustomers")
 	public List<LoanModel> allcus()
 	{
-		//Hello
+	
 		return calladminser.getAll();
 	}
 	@DeleteMapping("/displaycustomers/{id}")

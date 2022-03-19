@@ -8,7 +8,7 @@
 <table class="back">
     <tbody>
        <tr *ngFor="let i of users">
-    <div *ngIf="i.apprej!=''">
+    <div *ngIf="i.apprej!=null">
         <div class="detailsofcustomer">
           <div class="first">
            <td>ApplicantName: {{ i.applicantName }}</td>

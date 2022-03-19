@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
          this.registationService.LoginUser(this.loginuser).subscribe(data=>{
          if(data===true)
           {
-            alert("Customer Suceessfully LoggedIn");
-               this.router.navigate(['/']);
+          
+               this.router.navigate(['/user']);
            }
           else if(data===false)
             {

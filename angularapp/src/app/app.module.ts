@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     CustomerEditComponent,
     AdminNavbarComponent,
     SearchCustomerComponent,
+    UserNavComponent
   ],
   imports: [
     FormsModule,

@@ -30,7 +30,7 @@
           <button (click)="customerDetails(i.loanId)" class="btn btn-info" style="margin-left: 10px">View</button>
          <button (click)="editCustomer(i.loanId)" class="btn btn-secondary" style="margin-left: 10px"> Edit</button>        </td>
         <br>
-        <div *ngIf="i.apprej==''; else elseBlock" style="text-align:center;"  routerLinkActive="active" class="buttons">
+        <div *ngIf="i.apprej==null; else elseBlock" style="text-align:center;"  routerLinkActive="active" class="buttons">
           <button  class="btn btn-success" (click)="approveLoan(i.loanId)" routerLink="/adminapprovedloan" value="approveTask">Approve for Loan</button>
           <button class="btn btn-danger" (click)="rejectLoan(i.loanId)" routerLink="/adminapprovedloan">Reject</button>
         </div>
@@ -40,7 +40,7 @@
             <label *ngSwitchCase="'rej'"><button class="btn btn-danger">Rejected</button></label>
          </container-element>
          
-          <ng-template *ngIf="i.apprej!='';else thenBlock">
+          <ng-template *ngIf="i.apprej!=null;else thenBlock">
             <button class="btn btn-mini btn-primary" value="Approved">Approved</button>
           </ng-template>
           <ng-template #thenBlock>

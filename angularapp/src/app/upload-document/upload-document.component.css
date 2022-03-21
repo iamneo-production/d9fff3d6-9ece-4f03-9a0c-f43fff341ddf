@@ -1,0 +1,19 @@
+input[type="file"] {
+    display: none;
+}
+
+.half-width{
+    width: 50%;
+}
+
+.bottom-half{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

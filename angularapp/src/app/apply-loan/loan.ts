@@ -11,10 +11,7 @@ export class Loan{
     applicantSalary!:string;
     loanAmountRequired!:string;
     loanRepaymentMonths!:string; 
+    documentType!:string;
   }
 
-  export class Document{
-    documentId!:number;
-    documentType!:string;
-    documentUpload!:File;
-  }
+ 

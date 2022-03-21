@@ -10,10 +10,7 @@
                             [(ngModel)]="loan.applicantName" class="form-control" name="applicantName"
                             formControlName="applicantName"
                             [class.is-invalid]="applicantName?.invalid && applicantName?.touched">
-                        <!-- <div *ngIf="applicantName?.invalid && applicantName?.touched" class="text-danger">
-                            <small *ngIf="namecontrols?.['required']">Name is Required</small>
-                            <small *ngIf="namecontrols?.['minlength']">Name should be atleast 3 characters</small>
-                        </div> -->
+                       
                     </mat-form-field>
 
                     <mat-form-field class="full-width" appearance="outline">
@@ -21,11 +18,7 @@
                             [(ngModel)]="loan.applicantAddress" class="form-control" name="applicantAddress"
                             formControlName="applicantAddress"
                             [class.is-invalid]="applicantAddress?.invalid && applicantAddress?.touched">
-                        <!-- <div *ngIf="applicantAddress?.invalid && applicantAddress?.touched " class="text-danger">
-                            <small *ngIf="addresscontrols?.['required']">Address is Required</small>
-                            <small *ngIf="addresscontrols?.['minlength']">Invalid Address</small>
-                            <small *ngIf="addresscontrols?.['maxlength']">Invalid Address</small>
-                        </div> -->
+                        
                     </mat-form-field>
 
                     <mat-form-field class=" full-width" appearance="outline">
@@ -33,10 +26,7 @@
                             [(ngModel)]="loan.applicantMobile" class="form-control" name="applicantMobile"
                             formControlName="applicantMobile"
                             [class.is-invalid]="applicantMobile?.invalid && applicantMobile?.touched">
-                        <!-- <div *ngIf="applicantMobile?.invalid && applicantMobile?.touched " class="text-danger">
-                            <small *ngIf="mobilecontrols?.['required']">Mobile No. is required</small>
-                            <small *ngIf="mobilecontrols?.['minlength']">Invalid Mobile No.</small>
-                        </div> -->
+                       
                     </mat-form-field>
 
                     <mat-form-field class=" full-width" appearance="outline">
@@ -44,10 +34,7 @@
                             placeholder="Applicant Email" class="form-control" name="applicantEmail"
                             formControlName="applicantEmail"
                             [class.is-invalid]="applicantEmail?.invalid && applicantEmail?.touched">
-                        <!-- <div *ngIf="applicantEmail?.invalid && applicantEmail?.touched" class="text-danger">
-                            <small *ngIf="emailcontrols?.['required']">Email is Required</small>
-                            <small *ngIf="emailcontrols?.['pattern']">Email is Invalid</small>
-                        </div> -->
+                       
                     </mat-form-field>
 
                     <mat-form-field class="full-width" appearance="outline">
@@ -55,10 +42,7 @@
                             [(ngModel)]="loan.applicantAadhar" class="form-control" name="applicantAadhar"
                             formControlName="applicantAadhar"
                             [class.is-invalid]="applicantAadhar?.invalid && applicantAadhar?.touched">
-                        <!-- <div *ngIf="applicantAadhar?.invalid && applicantAadhar?.touched " class="text-danger">
-                            <small *ngIf="aadharcontrols?.['required']">Aadhar No. is mandatory</small>
-                            <small *ngIf="aadharcontrols?.['pattern']">Invalid Aadhar No.</small>
-                        </div> -->
+                        
                     </mat-form-field>
 
                 </div>
@@ -70,10 +54,7 @@
                             [(ngModel)]="loan.applicantPan" class="form-control" name="applicantPan"
                             formControlName="applicantPan"
                             [class.is-invalid]="applicantPan?.invalid && applicantPan?.touched">
-                        <!-- <div *ngIf="applicantPan?.invalid && applicantPan?.touched " class="text-danger">
-                            <small *ngIf="pancontrols?.['required']">Pan No. is mandatory</small>
-                            <small *ngIf="pancontrols?.['pattern']">Invalid Pan No.</small>
-                        </div> -->
+                       
                     </mat-form-field>
 
                     <mat-form-field class="full-width" appearance="outline">
@@ -81,9 +62,7 @@
                             [(ngModel)]="loan.applicantSalary" class="form-control" name="applicantSalary"
                             formControlName="applicantSalary"
                             [class.is-invalid]="applicantSalary?.invalid && applicantSalary?.touched">
-                        <!-- <div *ngIf="applicantSalary?.invalid && applicantSalary?.touched " class="text-danger">
-                            <small *ngIf="salarycontrols?.['required']">Salary is required</small>
-                        </div> -->
+                        
                     </mat-form-field>
 
                     <mat-form-field class="full-width" appearance="outline">
@@ -91,9 +70,7 @@
                             [(ngModel)]="loan.loanAmountRequired" class="form-control" name="loanAmountRequired"
                             formControlName="loanAmountRequired"
                             [class.is-invalid]="loanAmountRequired?.invalid && loanAmountRequired?.touched">
-                        <!-- <div *ngIf="loanAmountRequired?.invalid && loanAmountRequired?.touched " class="text-danger">
-                            <small *ngIf="amountcontrols?.['required']">Loan Amount is required</small>
-                        </div> -->
+                      
                     </mat-form-field>
 
                     <mat-form-field class="full-width" appearance="outline">
@@ -101,10 +78,7 @@
                             [(ngModel)]="loan.loanRepaymentMonths" class="form-control" name="loanRepaymentMonths"
                             formControlName="loanRepaymentMonths"
                             [class.is-invalid]="loanRepaymentMonths?.invalid && loanRepaymentMonths?.touched">
-                        <!-- <div *ngIf="loanRepaymentMonths?.invalid && loanRepaymentMonths?.touched " class="text-danger">
-                            <small *ngIf="repaycontrols?.['required']">Repayment months are required</small>
-                            <small *ngIf="repaycontrols?.['pattern']">Invalid Months</small>
-                        </div> -->
+                        
                     </mat-form-field>
 
                 </div>
@@ -116,13 +90,11 @@
                 <div>
                     <mat-form-field apperance="outline" class="half-width">
                         <mat-label>Please pick a type</mat-label>
-                        <mat-select name="documents" id="selectDocumentType" [(ngModel)]="doc.documentType"
+                        <mat-select name="documents" id="selectDocumentType" [(ngModel)]="loan.documentType"
                             class="form-control" name="documentType" formControlName="documentType"
                             [class.is-invalid]="documentType?.invalid && documentType?.touched">
-                            <!-- <div *ngIf="documentType?.invalid && documentType?.touched " class="text-danger">
-                                <small *ngIf="typecontrols?.['required']">Please select the type of the Document</small>
-                            </div> -->
-                            <!-- <mat-option value="none" selected disable hidden>Please pick a type</mat-option> -->
+                            
+                            <!-- <option value="none" selected disable hidden>Please pick a type</option> -->
                             <mat-option value="aadharcard">Aadhar Card</mat-option>
                             <mat-option value="pancard">Pan Card</mat-option>
                             <mat-option value="voterid">Voter Id</mat-option>
@@ -132,29 +104,15 @@
                 </div>
             </div>
 
+
+              
             <div class="bottom-half">
-                <label for="chooseFile"> Images or Documents(Upload below 2mb)</label>
-                <div class="bottom-half">
-                    <label for="chooseFile" class="custom-file-upload">
-                        <input type="file" id="chooseFile" (change)="onFileChanged($event)" name="chooseFile">
-                        Choose a File
-                    </label>
-                </div>
-
-                <div class="buttons">
-                    <!-- <div class="bottom-half-1"> -->
-                        <button mat-flat-button color="primary" id="uploadDocumentsButton" (click)="onUpload()">Upload
-                            Documents</button>
-                        
-                    <!-- </div> -->
-                    <!-- <div class="bottom-half-2"> -->
-                        <button type="submit" mat-flat-button color="accent" id="applyLoanButton">Apply for
+                <button type="submit" mat-flat-button color="accent" id="applyLoanButton">Apply for
                             loan</button>
-                    <!-- </div> -->
-                </div>
-                <div class="text-danger">{{message}}</div>
-            </div>
-
+            </div> 
+            
+            <div class="text-danger">{{message}}</div>
+           
         </form>
     </div>
 </div>

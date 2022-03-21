@@ -15,11 +15,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import {HttpClientModule} from '@angular/common/http';
+import { UploadDocumentComponent } from './upload-document/upload-document.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApplyLoanComponent
+    ApplyLoanComponent,
+    UploadDocumentComponent
     
   ],
   imports: [

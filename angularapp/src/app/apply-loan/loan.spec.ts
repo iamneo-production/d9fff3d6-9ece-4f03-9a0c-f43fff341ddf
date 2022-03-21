@@ -1,4 +1,4 @@
-import { Loan,Document } from './loan';
+import { Loan } from './loan';
 
 describe('Loan', () => {
   it('should create an instance', () => {
@@ -6,8 +6,3 @@ describe('Loan', () => {
   });
 });
 
-describe('Document', () => {
-  it('should create an instance', () => {
-    expect(new Document()).toBeTruthy();
-  });
-});

@@ -1,0 +1,35 @@
+<div class="bootstrap-wrapper">
+    <div>
+        <label for="chooseFile"> Images or Documents(Upload below 2mb)</label>
+        <div class="bottom-half">
+            <label for="file" class="custom-file-upload">
+                <input type="file" id="file" (change)="onFileChanged($event)" name="file">
+                Upload a File
+            </label>
+        </div>
+    </div>
+
+    <button mat-flat-button color="primary" id="uploadDocumentsButton" (click)="onUpload()">Upload
+        Documents</button>
+
+    <div class="text-danger">{{message}}</div>
+
+    <div class="container row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="documentId" placeholder="document id" name="documentId" [(ngModel)]="documentId" />
+        </div>
+        <div class="col-md-6">
+            <button mat-flat-button color="primary" id="uploadDocumentsButton" (click)="getFile()">
+                View Document</button>
+        </div>
+    </div>
+
+    <div class="container row">
+            <div class="col-md-12">
+                <div *ngIf=retrievedFile>
+                    <img [src]="retrievedFile">
+                </div>
+            </div>
+        </div>
+
+</div>

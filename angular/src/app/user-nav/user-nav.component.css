@@ -1,0 +1,15 @@
+.nav-bar
+{
+    background-color: #34568B; 
+}
+.logout
+{
+    text-indent: end;
+}
+.top-fields
+{
+    font-size: 20px;
+    display: flex;
+    margin-right: 40px;
+    text-indent: 200px;
+}

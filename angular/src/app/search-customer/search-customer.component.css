@@ -1,0 +1,26 @@
+.detailsofcustomer
+{
+    display:flex;
+    flex-wrap: wrap;
+    align-self: auto;
+    text-indent: 50px;
+    justify-content: center;
+    background-color: grey;
+    padding: 5%;
+    font-size: larger;
+    margin-left: 40px;
+    margin-top: 3px;
+    margin-right: 40px;
+}
+.search
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.first,.secound
+{
+    display: flexbox;
+
+}
+div {border-width: thick;}

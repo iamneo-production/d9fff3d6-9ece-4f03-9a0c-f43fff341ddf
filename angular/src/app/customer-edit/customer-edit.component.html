@@ -1,0 +1,48 @@
+<h3>Edit Customer</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+     <div class="form-group">
+      <label for="name">ApplicantName:</label>
+      <input type="text" class="form-control" id="applicantname" name="applicantName"  [(ngModel)]="customer.applicantName" >
+    </div> 
+    <div class="form-group">
+      <label for="name">LoanType:</label>
+      <input type="text" class="form-control" id="LoanType" required [(ngModel)]="customer.loantype" name="loantype">
+    </div>
+     <div class="form-group">
+      <label for="name">applicantAddress:</label>
+      <input type="text" class="form-control" id="applicantAddress" required [(ngModel)]="customer.applicantAddress" name="applicantAddress">
+    </div>
+      <div class="form-group">
+      <label for="name">applicantMobile:</label>
+      <input type="text" class="form-control" id="applicantMobile" required [(ngModel)]="customer.applicantMobile" name="applicantMobile">
+    </div>
+    <div class="form-group">
+      <label for="name">applicantEmail:</label>
+      <input type="text" class="form-control" id="applicantEmail" required [(ngModel)]="customer.applicantEmail" name="applicantEmail">
+    </div>
+ <div class="form-group">
+      <label for="name">applicantAadharr:</label>
+      <input type="text" class="form-control" id="applicantAadharr" required [(ngModel)]="customer.applicantAadharr" name="applicantAadharr">
+    </div>
+     <div class="form-group">
+      <label for="name">applicantPan:</label>
+      <input type="text" class="form-control" id="applicantPan" required [(ngModel)]="customer.applicantPan" name="applicantPan">
+    </div>
+   <div class="form-group">
+      <label for="name">applicantSalary:</label>
+      <input type="text" class="form-control" id="applicantSalary" required [(ngModel)]="customer.applicantSalary" name="applicantSalary">
+    </div>
+    <div class="form-group">
+      <label for="name">loanAmountRequired:</label>
+      <input type="text" class="form-control" id="loanAmountRequired" required [(ngModel)]="customer.loanAmountRequired" name="loanAmountRequired">
+    </div>
+    <div class="form-group">
+      <label for="name">repaymentMonths:</label>
+      <input type="text" class="form-control" id="repaymentMonths" required [(ngModel)]="customer.repaymentMonths" name="repaymentMonths">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button (click)="list()" class="btn btn-primary">Back to customerDetails</button>
+		<button (click)="list1()" class="btn btn-primary">Back to Search</button>
+  </form>
+</div>

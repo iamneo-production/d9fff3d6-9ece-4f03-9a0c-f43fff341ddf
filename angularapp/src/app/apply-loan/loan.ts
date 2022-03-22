@@ -1,5 +1,4 @@
 
-
 export class Loan{
     loanId!:number;
     applicantName!:string;
@@ -11,7 +10,6 @@ export class Loan{
     applicantSalary!:string;
     loanAmountRequired!:string;
     loanRepaymentMonths!:string; 
-    documentType!:string;
   }
 
  

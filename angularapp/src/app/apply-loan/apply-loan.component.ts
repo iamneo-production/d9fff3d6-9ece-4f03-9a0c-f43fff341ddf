@@ -56,8 +56,8 @@ export class ApplyLoanComponent implements OnInit{
     applicantPan: ['', [Validators.required, Validators.pattern(this.panRegex)]],
     applicantSalary: ['', [Validators.required]],
     loanAmountRequired: ['', [Validators.required]],
-    loanRepaymentMonths: ['', [Validators.required, Validators.pattern(this.repayRegex)]],
-    documentType: ['', [Validators.required]]
+    loanRepaymentMonths: ['', [Validators.required, Validators.pattern(this.repayRegex)]]
+
   })
 
 
@@ -98,9 +98,6 @@ export class ApplyLoanComponent implements OnInit{
     return this.Form.get('loanRepaymentMonths');
   }
 
-  get documentType() {
-    return this.Form.get('documentType');
-  }
 
   ngOnInit(): void {
   }

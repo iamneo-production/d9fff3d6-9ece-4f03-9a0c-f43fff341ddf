@@ -11,20 +11,20 @@ import javax.persistence.Table;
 public class LoanApplicantModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long loanId;
     private String applicantName;
     private String applicantAddress;
     private String applicantMobile;
     private String applicantEmail;
-    private String applicantAadhaar;
+    private String applicantAadhar;
     private String applicantPan;
     private String applicantSalary;
     private String loanAmountRequired;
     private String loanRepaymentMonths;
 
     public LoanApplicantModel(Long loanId, String applicantName, String applicantAddress, String applicantMobile,
-            String applicantEmail, String applicantAadhaar, String applicantPan, String applicantSalary,
+            String applicantEmail, String applicantAadhar, String applicantPan, String applicantSalary,
             String loanAmountRequired, String loanRepaymentMonths) {
         super();
         this.loanId = loanId;
@@ -32,7 +32,7 @@ public class LoanApplicantModel {
         this.applicantAddress = applicantAddress;
         this.applicantMobile = applicantMobile;
         this.applicantEmail = applicantEmail;
-        this.applicantAadhaar = applicantAadhaar;
+        this.applicantAadhar = applicantAadhar;
         this.applicantPan = applicantPan;
         this.applicantSalary = applicantSalary;
         this.loanAmountRequired = loanAmountRequired;
@@ -83,11 +83,11 @@ public class LoanApplicantModel {
     }
 
     public String getApplicantAadhaar() {
-        return applicantAadhaar;
+        return applicantAadhar;
     }
 
-    public void setApplicantAadhaar(String applicantAadhaar) {
-        this.applicantAadhaar = applicantAadhaar;
+    public void setApplicantAadhaar(String applicantAadhar) {
+        this.applicantAadhar = applicantAadhar;
     }
 
     public String getApplicantPan() {

@@ -9,14 +9,15 @@ export class DocumentService {
 
   constructor(private http: HttpClient) { }
 
-  public uploadDocument(file: File): Observable<HttpEvent<any>> {
+  public uploadDocument(file: File,type : string): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
-    formData.append('files', file, file.name);
+    formData.append('file', file, file.name);
+    formData.append('documentType',type);
 
     return this.http.post<any>("https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/uploadDocument", formData);
   }
 
-  public getUploadedDocument(id : number){
-   return this.http.get('https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/file/get/' + id);
+  public getUploadedDocument(fileName: string){
+   return this.http.get('https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io//getDocument/' + fileName);
   }
 }

@@ -1,4 +1,22 @@
 <div class="bootstrap-wrapper">
+    
+    <div>
+        <label for="selectDocumentType">Upload documents(Mandatory*)</label>
+        <div>
+            <mat-form-field apperance="outline" class="half-width">
+                <mat-label>Please pick a type</mat-label>
+                <mat-select name="documents" id="selectDocumentType" [(ngModel)]="documentType"
+                     name="documentType" Required>
+                    
+                    <!-- <option value="none" selected disable hidden>Please pick a type</option> -->
+                    <mat-option value="aadharcard">Aadhar Card</mat-option>
+                    <mat-option value="pancard">Pan Card</mat-option>
+                    <mat-option value="voterid">Voter Id</mat-option>
+                    <mat-option value="passport">Passport</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
     <div>
         <label for="chooseFile"> Images or Documents(Upload below 2mb)</label>
         <div class="bottom-half">
@@ -7,29 +25,15 @@
                 Upload a File
             </label>
         </div>
+        <a href="{{viewUrl}}" *ngIf=viewUrl target="_blank">view</a>
     </div>
-
+    
+    <div class="bottom-half">
     <button mat-flat-button color="primary" id="uploadDocumentsButton" (click)="onUpload()">Upload
         Documents</button>
-
-    <div class="text-danger">{{message}}</div>
-
-    <div class="container row">
-        <div class="col-md-6">
-            <input type="text" class="form-control" id="documentId" placeholder="document id" name="documentId" [(ngModel)]="documentId" />
-        </div>
-        <div class="col-md-6">
-            <button mat-flat-button color="primary" id="uploadDocumentsButton" (click)="getFile()">
-                View Document</button>
-        </div>
     </div>
 
-    <div class="container row">
-            <div class="col-md-12">
-                <div *ngIf=retrievedFile>
-                    <img [src]="retrievedFile">
-                </div>
-            </div>
-        </div>
+    <div class="text-danger" *ngIf=message>{{message}}</div>
 
+    
 </div>

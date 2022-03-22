@@ -1,7 +1,7 @@
 <div class="bootstrap-wrapper">
     <div class="container">
 
-        <form [formGroup]="Form" class="form" (ngSubmit)="onApplyLoan()">
+        <form [formGroup]="Form" class="form" >
             <div class="row group">
                 <div class="col-md-6 ">
 
@@ -86,32 +86,16 @@
 
 
             <div>
-                <label for="selectDocumentType">Upload documents(Mandatory*)</label>
-                <div>
-                    <mat-form-field apperance="outline" class="half-width">
-                        <mat-label>Please pick a type</mat-label>
-                        <mat-select name="documents" id="selectDocumentType" [(ngModel)]="loan.documentType"
-                            class="form-control" name="documentType" formControlName="documentType"
-                            [class.is-invalid]="documentType?.invalid && documentType?.touched">
-                            
-                            <!-- <option value="none" selected disable hidden>Please pick a type</option> -->
-                            <mat-option value="aadharcard">Aadhar Card</mat-option>
-                            <mat-option value="pancard">Pan Card</mat-option>
-                            <mat-option value="voterid">Voter Id</mat-option>
-                            <mat-option value="passport">Passport</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
+                <app-upload-document></app-upload-document>
             </div>
-
-
               
+
             <div class="bottom-half">
-                <button type="submit" mat-flat-button color="accent" id="applyLoanButton">Apply for
+                <button  mat-flat-button color="accent" id="applyLoanButton" (click)="onApplyLoan()">Apply for
                             loan</button>
             </div> 
             
-            <div class="text-danger">{{message}}</div>
+            <div class="text-danger" *ngIf=message>{{message}}</div>
            
         </form>
     </div>

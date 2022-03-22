@@ -17,6 +17,10 @@ import { SearchCustomerComponent } from './search-customer/search-customer.compo
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { UserComponent } from './user/user.component';
+import { UserLoanstatusComponent } from './user-loanstatus/user-loanstatus.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { UserNavComponent } from './user-nav/user-nav.component';
     CustomerEditComponent,
     AdminNavbarComponent,
     SearchCustomerComponent,
-    UserNavComponent
+    UserNavComponent,
+    UserComponent,
+    UserLoanstatusComponent,
+    UserSearchComponent,
+    UserProfileComponent,
   ],
   imports: [
     FormsModule,

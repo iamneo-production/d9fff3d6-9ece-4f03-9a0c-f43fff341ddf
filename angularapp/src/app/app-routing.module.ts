@@ -8,7 +8,11 @@ import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { LoginComponent } from './login/login.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserLoanstatusComponent } from './user-loanstatus/user-loanstatus.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [{path:'',component:LoginComponent},{path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},{path:'admin',component:AdminComponent},
@@ -16,7 +20,9 @@ const routes: Routes = [{path:'',component:LoginComponent},{path:'login',compone
 { path: 'adminapprovedloan', component: AdminapprovedloanComponent },
 {path:'details/:id',component:CustomerDetailComponent},
 {path:'edit/:id',component:CustomerEditComponent},
-{path:'searchdetail/:id',component:SearchCustomerComponent},{path:"user",component:UserNavComponent}
+{path:'searchdetail/:id',component:SearchCustomerComponent},{path:'userdetailsearch/:id',component:UserSearchComponent},
+{path:'',component:LoginComponent},{path:'user',component:UserComponent},{path:'userloanstatus',component:UserLoanstatusComponent},
+{path:'userprofile',component:UserProfileComponent},
 //UPDATE `topup_loan`.`loan_model` SET `loan_id` = '123459', `repayment_months` = '24', `applicant_aadharr` = '345678997', `applicant_address` = '2/78,loasn', `applicant_email` = 'applicant12@gmail.com', `applicant_mobile` = '999999989', `applicant_name` = 'test29', `applicant_pan` = '234548567', `applicant_salary` = '2337445', `loantype` = 'test2', `apprej` = 'rej' WHERE (`loan_id` = '123456');  
 //INSERT INTO `topup_loan`.`loan_model` (`loan_id`, `repayment_months`, `applicant_aadharr`, `applicant_address`, `applicant_email`, `applicant_mobile`, `applicant_name`, `applicant_pan`, `applicant_salary`, `loan_amount_required`, `loantype`, `apprej`) VALUES ('1234', '34', '343', 'lop', 'apply@gmail.com', '888888888', 'test45', '596806', '4875948', '38478349', 'test4', 'app');
 ];

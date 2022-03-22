@@ -1,0 +1,52 @@
+
+<div *ngIf="model">
+    <div id="adminnav">
+        <app-user-nav></app-user-nav>
+    </div>
+    <form class="search">
+        <input type="text" [(ngModel)]="id" name="seach" placeholder="Enter loan id to search">
+        <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left: 10px">Search</button>
+    </form>
+<table class="back">
+    <tbody>
+        <tr>
+        <div class="detailsofcustomer">
+          <div class="first">
+           <td>ApplicantName: {{ model.applicantName }}</td>
+              <td>Applicant Id: {{ model.loanId }}</td>  
+              <td>ApplicantType: {{ model.loantype }}</td>
+         </div>
+         <div>
+              <td>ApplicantAddress: {{ model.applicantAddress }}</td>
+              <td>ApplicantMobile: {{ model.applicantMobile }}</td> 
+              <td>ApplicantEmail: {{ model.applicantEmail }}</td>  
+        </div>
+        <div>
+              <td>ApplicantAadharrNo: {{ model.applicantAadharr }}</td>
+              <td>ApplicantPanNo: {{ model.applicantPan }}</td>
+              <td>ApplicantSalary: {{ model.applicantSalary }}</td>
+        </div>
+        <div>
+              <td>AmountRequired: {{ model.loanAmountRequired }}</td>
+              <td>RepaymentMonths:{{model.repaymentMonths}}</td>
+              <container-element [ngSwitch]="model.apprej">
+                <label *ngSwitchCase="'app'"> <button class="btn btn-mini btn-primary" value="Approved">Approved</button></label>
+                <label *ngSwitchCase="'rej'"><button class="btn btn-mini btn-danger">Rejected</button></label>
+             </container-element>
+             <td> <button routerLink="/userloanstatus" class="btn btn-info" style="margin-left: 10px" >Back to Search</button></td>
+        </div>
+    </div>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div *ngIf="!model">
+    <div id="adminnav">
+        <app-user-nav></app-user-nav>
+    </div>
+    <form class="search">
+        <input type="text" [(ngModel)]="id" name="seach" placeholder="Enter loan id to search">
+        <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left: 10px">Search</button>
+    </form>
+   <p class="wrong"> Enter Correct Loan Id   <button routerLink="/userloanstatus" class="btn btn-info" style="margin-left: 10px">Back to Search</button></p>
+</div>  

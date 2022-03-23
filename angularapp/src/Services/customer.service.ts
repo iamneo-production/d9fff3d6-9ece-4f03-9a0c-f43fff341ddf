@@ -13,9 +13,9 @@ export class CustomerService {
   private usersurl1:string;
   private usersUrl:string;
   constructor(private http: HttpClient) {
-    this.profile='https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/getProfile';
-    this.usersurl1='https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/editCus';
-    this.usersUrl = 'https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/displaycustomer';
+    this.profile='https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/getProfile';
+    this.usersurl1='https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/editCus';
+    this.usersUrl = 'https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/displaycustomer';
 
   }
   getCustomer(id: number): Observable<any> {

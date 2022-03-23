@@ -5,7 +5,7 @@ export class Loanmodel {
 	    applicantAddress: string;
 		applicantMobile: string;
 		applicantEmail: string;
-		applicantAadharr: string;
+		applicantAadhar: string;
 		applicantPan: string;
 		applicantSalary: string;
 		loanAmountRequired: string;

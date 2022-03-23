@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = "https://8081-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/")
 public class AdminController {
 
 	@Autowired

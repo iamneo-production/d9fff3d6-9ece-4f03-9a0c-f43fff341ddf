@@ -1,6 +1,5 @@
 package com.examly.springapp.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,7 +15,7 @@ public class LoanModel {
 		private String applicantAddress;
 		private String applicantMobile;
 		private String applicantEmail;
-		private String applicantAadharr;
+		private String applicantAadhar;
 		private String applicantPan;
 		private String applicantSalary;
 		private String loanAmountRequired;
@@ -28,7 +27,7 @@ public class LoanModel {
 	
 		}
 		public LoanModel(int loanId, String loantype, String applicantName, String applicantAddress,
-				String applicantMobile, String applicantEmail, String applicantAadharr, String applicantPan,
+				String applicantMobile, String applicantEmail, String applicantAadhar, String applicantPan,
 				String applicantSalary, String loanAmountRequired, String repaymentMonths,String apprej) {
 			super();
 			this.loanId = loanId;
@@ -37,7 +36,7 @@ public class LoanModel {
 			this.applicantAddress = applicantAddress;
 			this.applicantMobile = applicantMobile;
 			this.applicantEmail = applicantEmail;
-			this.applicantAadharr = applicantAadharr;
+			this.applicantAadhar = applicantAadhar;
 			this.applicantPan = applicantPan;
 			this.applicantSalary = applicantSalary;
 			this.loanAmountRequired = loanAmountRequired;
@@ -81,10 +80,10 @@ public class LoanModel {
 			this.applicantEmail = applicantEmail;
 		}
 		public String getApplicantAadharr() {
-			return applicantAadharr;
+			return applicantAadhar;
 		}
-		public void setApplicantAadharr(String applicantAadharr) {
-			this.applicantAadharr = applicantAadharr;
+		public void setApplicantAadharr(String applicantAadhar) {
+			this.applicantAadhar = applicantAadhar;
 		}
 		public String getApplicantPan() {
 			return applicantPan;

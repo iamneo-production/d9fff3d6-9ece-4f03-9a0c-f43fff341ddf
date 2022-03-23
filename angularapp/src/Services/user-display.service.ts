@@ -14,10 +14,10 @@ export class UserDisplayService {
 
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/displaycustomers';
-    this.usersurl1='https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/editCus';
-    this.approve="https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/approve";
-    this.reject="https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/reject";
+    this.usersUrl = 'https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/displaycustomers';
+    this.usersurl1='https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/editCus';
+    this.approve="https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/approve";
+    this.reject="https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/reject";
   }
   getEmployeesList(): Observable<Loanmodel[]> {
     return this.http.get<Loanmodel[]>(`${this.usersUrl}`);

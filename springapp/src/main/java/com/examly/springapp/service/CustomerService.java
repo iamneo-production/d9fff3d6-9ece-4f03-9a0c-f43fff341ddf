@@ -28,7 +28,7 @@ public class CustomerService {
 		}
 		return p;
 	}
-	public Optional<LoanModel> getCustomer(int id) {
+	public Optional<LoanModel> getCustomer(Long id) {
 		return repo.findById(id);
 	}
 }

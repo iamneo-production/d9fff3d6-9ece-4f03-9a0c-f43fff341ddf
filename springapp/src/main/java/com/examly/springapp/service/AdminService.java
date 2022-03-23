@@ -7,7 +7,6 @@ import com.examly.springapp.model.LoanModel;
 import com.examly.springapp.repository.LoanRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -21,21 +20,21 @@ public class AdminService {
 	public List<LoanModel> getAll() {
 		return loanrepo.findAll();
 	}
-	public String deleteCustomer(int id) {
+	public String deleteCustomer(Long id) {
 		loanrepo.deleteById(id);
 		return "deleted";
 	}
 
-	public LoanModel getCustomer(int id) {
+	public LoanModel getCustomer(Long id) {
 		return loanrepo.findByLoanId(id);
 	}
-	public LoanModel editCustomer(LoanModel t, int id) {
+	public LoanModel editCustomer(LoanModel t, Long id) {
 		Optional<LoanModel> find=loanrepo.findById(id);
 		if(find.isPresent())
 		{
 			t.setLoantype(t.getLoantype());
 			t.setApplicantName(t.getApplicantName());
-			t.setApplicantAadharr(t.getApplicantAadharr());
+			t.setApplicantAadhar(t.getApplicantAadhar());
 			t.setApplicantAddress(t.getApplicantAddress());
 			t.setApplicantEmail(t.getApplicantEmail());
 			t.setApplicantMobile(t.getApplicantMobile());
@@ -47,13 +46,13 @@ public class AdminService {
 		}
 		return t;
 	}
-	public boolean approve(int id) {
+	public boolean approve(Long id) {
 		LoanModel l=loanrepo.findByLoanId(id);
 		l.setApprej("app");
 		loanrepo.save(l);
 		return true;
 	}
-	public boolean reject(int id) {
+	public boolean reject(Long id) {
 		LoanModel l=loanrepo.findByLoanId(id);
 		l.setApprej("rej");
 		loanrepo.save(l);

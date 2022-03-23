@@ -4,18 +4,9 @@
     margin-top: 10px;
 }
 
-
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
 #applyLoanButton{
     width: 170px;
 }
-
 
 .control
 {
@@ -40,6 +31,7 @@
     margin-top: 10px;
     border: 5px solid;
     background-color: rgb(70, 0, 41);
+    color:azure;
 }
 .heading
 {    margin-top: 5px;
@@ -77,10 +69,8 @@
     margin-right: 15%;
     margin-top: 25px;
     margin-left: 10%;
+    margin-bottom: 75px;
     
 }
-.login
-{
-    font-size:medium;
-    margin-left: 1%;
-}
+
+/* Rahul@5961 */

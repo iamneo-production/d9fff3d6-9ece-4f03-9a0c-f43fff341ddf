@@ -24,7 +24,7 @@ public class CustomerController {
 		return callser.getCustomer(id);
 	}
 	@GetMapping("/displaycustomer/{id}")
-	public Optional<LoanModel> getCustomer(@PathVariable("id") int id)
+	public Optional<LoanModel> getCustomer(@PathVariable("id") Long id)
 	{
 		return callser.getCustomer(id);
 	}

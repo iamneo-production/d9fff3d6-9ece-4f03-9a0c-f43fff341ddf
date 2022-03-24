@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
-import { Loan } from './loan.model';
+import { Loanmodel } from '../loanmodel';
 import { ApplyloanService } from '../../Services/applyloan.service';
 import { Router } from '@angular/router';
 
@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 })
 export class UserApplyLoanComponent implements OnInit {
 
-  loan: Loan;
+  loan: Loanmodel;
   message: string|undefined;
 
   constructor(
     private formbuilder: FormBuilder,
     private loanService: ApplyloanService  
     ) { 
-    this.loan = new Loan();
+    this.loan = new Loanmodel();
     
   }
 
@@ -55,7 +55,7 @@ export class UserApplyLoanComponent implements OnInit {
     applicantPan: ['', [Validators.required, Validators.pattern(this.panRegex)]],
     applicantSalary: ['', [Validators.required]],
     loanAmountRequired: ['', [Validators.required]],
-    loanRepaymentMonths: ['', [Validators.required, Validators.pattern(this.repayRegex)]]
+    repaymentMonths: ['', [Validators.required, Validators.pattern(this.repayRegex)]]
 
   })
 
@@ -93,8 +93,8 @@ export class UserApplyLoanComponent implements OnInit {
     return this.Form.get('loanAmountRequired');
   }
   
-  get loanRepaymentMonths() {
-    return this.Form.get('loanRepaymentMonths');
+  get repaymentMonths() {
+    return this.Form.get('repaymentMonths');
   }
 
   ngOnInit(): void {

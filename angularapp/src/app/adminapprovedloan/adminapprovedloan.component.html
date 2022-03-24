@@ -3,46 +3,53 @@
 </div>
 <form class="search">
     <input type="text" [(ngModel)]="id" name="seach" placeholder="Enter loan id to search">
-    <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left: 10px">Search</button>
+    <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left : 10px">Search</button>
 </form>
 <table class="back">
     <tbody>
-       <tr *ngFor="let i of users">
-    <div *ngIf="i.apprej!=null">
-        <div class="detailsofcustomer">
-          <div class="first">
-           <td>ApplicantName: {{ i.applicantName }}</td>
-              <td>Applicant Id: {{ i.loanId }}</td>   
-              <td>ApplicantType: {{ i.loantype }}</td>
-         </div>
-         <div>
-              <td>ApplicantAddress: {{ i.applicantAddress }}</td>
-              <td>ApplicantMobile: {{ i.applicantMobile }}</td> 
-              <td>ApplicantEmail: {{ i.applicantEmail }}</td>  
-        </div>
-        <div>
-              <td>ApplicantAadharrNo: {{ i.applicantAadhar }}</td>
-              <td>ApplicantPanNo: {{ i.applicantPan }}</td>
-              <td>ApplicantSalary: {{ i.applicantSalary }}</td>
-        </div>
-        <div>
-              <td>AmountRequired: {{ i.loanAmountRequired }}</td>
-              <td>RepaymentMonths:{{i.repaymentMonths}}</td>
-          <!--    <td>App/Rej:{{ i.apprej }}</td> -->
-        </div> 
-   <br>  
-    <div class="buttons">          
-        <td ><button (click)="deleteCustomer(i.loanId)" class="btn btn-danger">Delete</button>
-            <button (click)="customerDetails(i.loanId)" class="btn btn-success" style="margin-left: 10px">View</button>
-            <button (click)="editCustomer(i.loanId)" class="btn btn-secondary" style="margin-left: 10px"> Edit</button>
-        </td>
-        <container-element [ngSwitch]="i.apprej">
-            <label *ngSwitchCase="'app'"> <button class="btn btn-success" value="Approved">Approved</button></label>
-            <label *ngSwitchCase="'rej'"><button class="btn btn-mini btn-danger">Rejected</button></label>
-         </container-element>
-         </div> 
-    </div>
-    </div>
+        <tr *ngFor="let i of users">
+            <div *ngIf="i.apprej!=null">
+                <div class="detailsofcustomer">
+                    <div class="first">
+                        <td>Applicant Name : {{ i.applicantName }}</td>
+                        <td>Loan Id : {{ i.loanId }}</td>
+                        <td>Applicant Type : {{ i.loantype }}</td>
+                    </div>
+                    <div>
+                        <td>Applicant Address : {{ i.applicantAddress }}</td>
+                        <td>Applicant Mobile : {{ i.applicantMobile }}</td>
+
+                    </div>
+                    <div>
+                        <td>Applicant Email : {{ i.applicantEmail }}</td>
+                        <td>Applicant Aadhar No : {{ i.applicantAadhar }}</td>
+                        
+
+                    </div>
+                    <div>
+                        <td>Applicant Pan No : {{ i.applicantPan }}</td>
+                        <td>Applicant Salary : {{ i.applicantSalary }}</td>
+                        <td>Amount Required : {{ i.loanAmountRequired }}</td>
+                        <td>Repayment Months :{{i.repaymentMonths}}</td>
+                        <!-- <td>Status :{{ i.apprej }}</td> -->
+                    </div>
+                    <br>
+                    <div class="buttons">
+                        <td><button (click)="deleteCustomer(i.loanId)" class="btn btn-danger">Delete</button>
+                            <button (click)="customerDetails(i.loanId)" class="btn btn-success"
+                                style="margin-left : 10px">View</button>
+                            <button (click)="editCustomer(i.loanId)" class="btn btn-secondary"
+                                style="margin-left : 10px"> Edit</button>
+                        </td>
+                        <container-element [ngSwitch]="i.apprej">
+                            <label *ngSwitchCase="'app'"> <button class="btn btn-success"
+                                    value="Approved">Approved</button></label>
+                            <label *ngSwitchCase="'rej'"><button
+                                    class="btn btn-mini btn-danger">Rejected</button></label>
+                        </container-element>
+                    </div>
+                </div>
+            </div>
         </tr>
     </tbody>
-  </table>
+</table>

@@ -19,3 +19,17 @@ input[type="file"] {
     font-size: medium;
     font-style:bold;
 }
+
+select{
+    color:black;
+    height:20px;
+    width:40%;
+}
+
+option{
+    padding: 6px 12px;
+    font-size: medium;
+    font-style:bold;
+    height:40px;
+    color:black;
+}

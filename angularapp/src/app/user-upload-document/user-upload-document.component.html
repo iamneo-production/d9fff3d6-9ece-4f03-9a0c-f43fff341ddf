@@ -2,10 +2,10 @@
     <div class="ro">
             <label for="selectDocumentType" class="label">Upload documents(Mandatory*)</label>
             <div>
-                <select class="form-select" aria-label="Default select example" name="documents" id="selectDocumentType"
+                <select class="form-select" name="documents" id="selectDocumentType"
                     [(ngModel)]="documentType" name="documentType" required>
 
-                    <option value="none" selected disable hidden>Please pick a type</option>
+                    <option value="none" class="optxt"selected disable hidden>Please pick a type</option>
                     <option value="aadharcard">Aadhar Card</option>
                     <option value="pancard">Pan Card</option>
                     <option value="voterid">Voter Id</option>

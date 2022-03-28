@@ -26,46 +26,41 @@ import com.examly.springapp.repository.FileUploadResponse;
 @RestController
 @CrossOrigin(origins = "*")
 public class DocumentController {
-    @Autowired
+	@Autowired
 	private DocumentRepository docRepo;
 
 	public DocumentController(DocumentRepository docRepo) {
 		super();
 		this.docRepo = docRepo;
 	}
-    
 
 	@PostMapping("/uploadDocument")
-    @CrossOrigin(origins = "*")
+	@CrossOrigin(origins = "*")
 	public FileUploadResponse saveDocument(@RequestParam("file") MultipartFile file,
-        @RequestParam("documentType") String documentType) throws IOException {
+			@RequestParam("documentType") String documentType) throws IOException {
 		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-		DocumentModel doc = new DocumentModel(fileName,documentType,file.getBytes());
+		DocumentModel doc = new DocumentModel(fileName, documentType, file.getBytes());
 
 		docRepo.save(doc);
-		
-		String url = ServletUriComponentsBuilder.fromCurrentContextPath()
-				.path("/getDocument/")
-				.path(fileName)
+
+		String url = ServletUriComponentsBuilder.fromCurrentContextPath().path("/getDocument/").path(fileName)
 				.toUriString();
-        
-        String contentType = file.getContentType();
-		FileUploadResponse response = new FileUploadResponse(fileName,contentType,url);
-		
-		return response;
+
+		String contentType = file.getContentType();
+
+		return new FileUploadResponse(fileName,contentType,url);
 	}
-	
+
 	@GetMapping("/getDocument/{fileName}")
-	ResponseEntity<byte[]> downloadFile(@PathVariable String fileName,HttpServletRequest request){
-		
+	ResponseEntity<byte[]> downloadFile(@PathVariable String fileName, HttpServletRequest request) {
+
 		DocumentModel doc = docRepo.findByDocumentName(fileName);
-		
+
 		String mimeType = request.getServletContext().getMimeType(doc.getDocumentName());
-		
-		return ResponseEntity.ok()
-				.contentType(MediaType.parseMediaType(mimeType))
-				.header(HttpHeaders.CONTENT_DISPOSITION,"inline; fileName=\"" +doc.getDocumentName() + "\"")
+
+		return ResponseEntity.ok().contentType(MediaType.parseMediaType(mimeType))
+				.header(HttpHeaders.CONTENT_DISPOSITION, "inline;fileName="+doc.getDocumentName())
 				.body(doc.getDocumentUpload());
-		
+
 	}
 }

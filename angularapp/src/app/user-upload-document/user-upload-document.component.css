@@ -2,7 +2,6 @@ input[type="file"] {
     display: none;
 }
 
-
 .bottom-half{
     margin-bottom: 15px;
     margin-top: 10px;
@@ -27,9 +26,10 @@ select{
 }
 
 option{
-    padding: 6px 12px;
     font-size: medium;
     font-style:bold;
-    height:40px;
-    color:black;
 }
+.aa{
+     font-size:medium;
+     font-style:large;
+ }

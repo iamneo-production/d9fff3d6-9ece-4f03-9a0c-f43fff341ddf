@@ -7,12 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LoanRepository extends JpaRepository<LoanModel, Integer>{
+public interface LoanRepository extends JpaRepository<LoanModel, Long>{
 
    
-
-  //void deleteByLoanId(int id);
-
-    LoanModel findByLoanId(int id);
+    //void deleteByLoanId(Long id);
+    LoanModel findByLoanId(Long id);
 
 }

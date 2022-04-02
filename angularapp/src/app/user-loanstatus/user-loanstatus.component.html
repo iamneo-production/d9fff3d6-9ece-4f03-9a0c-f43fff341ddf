@@ -1,0 +1,7 @@
+<div id="adminnav">
+    <app-user-nav></app-user-nav>
+</div>
+<form class="search">
+    <input type="text" [(ngModel)]="id" name="search" placeholder="Enter loan id to search">
+    <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left: 10px">Search</button>
+</form>

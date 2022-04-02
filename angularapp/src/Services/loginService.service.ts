@@ -12,10 +12,10 @@ export class LoginService {
   }
   public LoginUser(login:UserLogin):Observable<any>
   {
-    return this.http.post<UserLogin>("https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/isUserPresent",login);  
+    return this.http.post<UserLogin>("https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/isUserPresent",login);  
   }
   public saveUser(user : User):Observable<any>
   {
-     return this.http.post<User>("https://8080-addaafdafcfdfcbaaeddadfaadaeaacdfed.examlyiopb.examly.io/saveUser",user)
+     return this.http.post<User>("https://8080-ddcadebbdcbcecbaaeddadfaadaeaacdfed.examlyiopb.examly.io/saveUser",user)
   }
 }

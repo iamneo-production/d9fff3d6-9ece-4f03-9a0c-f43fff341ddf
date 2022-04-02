@@ -13,7 +13,8 @@ import { UserLogin } from './user-login';
 export class LoginComponent implements OnInit {
 
   loginuser: UserLogin;
- 
+  public static id:string;
+
 
   constructor( 
       private router: Router, 
@@ -22,15 +23,14 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(){
     if(this.loginuser.email==="admin" && this.loginuser.password==="admin")
-    {
+    { LoginComponent.id=this.loginuser.email;
       this.router.navigate(['/admin']);
     }
     else
     {
          this.registationService.LoginUser(this.loginuser).subscribe(data=>{
          if(data===true)
-          {
-          
+          { LoginComponent.id=this.loginuser.email;
                this.router.navigate(['/user']);
            }
           else if(data===false)

@@ -1,7 +1,7 @@
 
 <div *ngIf="model">
     <div id="adminnav">
-        <app-admin-navbar></app-admin-navbar>
+        <app-user-nav></app-user-nav>
     </div>
     <form class="search">
         <input type="text" [(ngModel)]="id" name="search" placeholder="Enter loan id to search">
@@ -13,7 +13,7 @@
         <div class="detailsofcustomer">
           <div class="first">
            <td>Applicant Name: {{ model.applicantName }}</td>
-              <td> Loan Id: {{ model.loanId }}</td>  
+              <td>Loan Id: {{ model.loanId }}</td>  
               <td>Applicant Type: {{ model.loantype }}</td>
          </div>
          <div>
@@ -28,9 +28,12 @@
         </div>
         <div>
               <td>Amount Required: {{ model.loanAmountRequired }}</td>
-              <td>Repayment Months:{{model.repaymentMonths}}</td>
-              <td>App/Rej:{{ model.apprej }}</td>
-             <td> <button routerLink="/adminapprovedloan" class="btn btn-info" style="margin-left: 10px" >Back to Search</button></td>
+              <td>Loan Repayment Months:{{model.repaymentMonths}}</td>
+              <container-element [ngSwitch]="model.apprej">
+                <label *ngSwitchCase="'app'"> <button class="btn btn-mini btn-primary" value="Approved">Approved</button></label>
+                <label *ngSwitchCase="'rej'"><button class="btn btn-mini btn-danger">Rejected</button></label>
+             </container-element>
+             <td> <button routerLink="/userloanstatus" class="btn btn-info" >Back to Search</button></td>
         </div>
     </div>
         </tr>
@@ -39,11 +42,11 @@
 </div>
 <div *ngIf="!model">
     <div id="adminnav">
-        <app-admin-navbar></app-admin-navbar>
+        <app-user-nav></app-user-nav>
     </div>
     <form class="search">
-        <input type="text" [(ngModel)]="id" name="search" placeholder="Enter loan id to search">
+        <input type="text" [(ngModel)]="id" name="seach" placeholder="Enter loan id to search">
         <button (click)="searchCustomer(id)" class="btn btn-info" style="margin-left: 10px">Search</button>
     </form>
-   <p class="wrong"> Enter Correct Id   <button routerLink="/adminapprovedloan" class="btn btn-info" style="margin-left: 10px">Back to Search</button></p>
+   <p class="wrong"> Enter Correct Loan Id   <button routerLink="/userloanstatus" class="btn btn-info" style="margin-left: 10px">Back to Search</button></p>
 </div>  
